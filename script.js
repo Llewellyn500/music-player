@@ -31,7 +31,6 @@ function loadSong(song) {
   title.innerText;
   audio.src = `music/${song}.mp3`;
   cover.style.backgroundImage;
-  //   cover.src = `images/${song}.jpg`;
 }
 
 // Play song
