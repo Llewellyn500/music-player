@@ -31,7 +31,7 @@ body {
 .bg-animation-effect div {
   height: 8px;
   width: 8px;
-  background-color: #32323a83;
+  background-color: #32323a33;
   margin-left: calc((100% - 90px) / 13);
   border-radius: 50%;
 }
