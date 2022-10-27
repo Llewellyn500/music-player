@@ -12,10 +12,7 @@ const cover = document.querySelector("#cover");
 
 
 // Song titles
-var songs = new Array(100);
-for(i = 1; i <= 3; i++) {
-    songs[i];
-};
+
 
 //No Song Playing Cover
 cover.style.backgroundImage = 'url("./images/1.jpg")';
