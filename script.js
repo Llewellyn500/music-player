@@ -6,13 +6,22 @@ const nextBtn = document.querySelector("#next");
 const audio = document.querySelector("audio");
 const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
+const tabTitle = document.querySelector("#tab-title");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
 // Song titles
+// reading songs from music folder
 const songs = [
-  "LA ESPADA - Eternal Rajin",
+  "STAR WALKIN’ (League of Legends Worlds Anthem) - Lil Nas X",
+  "Fake Ex - Yaw Tog",
+  "Dance Monkey - Tones and I",
+  "Dear Alcohol - Dax",
+  "Thought Those Were My Last Words - Dax",
+  "This Fffire (Rich Costey re‐record) - Franz Ferdinand",
+  "Dear God - Dax",
   "Number One (PV Remix)  - PV",
+    "Shape of You - Ed Sheeran",
   "I Really Want to Stay at Your House - Rosa Walton",
 ];
 
@@ -28,6 +37,7 @@ loadSong(songs[songIndex]);
 
 // Update song details
 function loadSong(song) {
+  tabTitle.innerText;
   title.innerText;
   audio.src = `music/${song}.mp3`;
   cover.style.backgroundImage;
@@ -177,6 +187,7 @@ playBtn.addEventListener("click", () => {
       cover.style.backgroundSize = "cover";
       //Reading Title Tag
       title.innerText = tag.tags.title;
+      tabTitle.innerText = tag.tags.title;
     },
     onError: function (error) {
       console.log(":(", error.type, error.info);
@@ -205,6 +216,7 @@ prevBtn.addEventListener("click", () => {
       cover.style.backgroundSize = "cover";
       //Reading Title Tag
       title.innerText = tag.tags.title;
+      tabTitle.innerText = tag.tags.title;
     },
     onError: function (error) {
       console.log(":(", error.type, error.info);
@@ -230,6 +242,7 @@ nextBtn.addEventListener("click", () => {
       cover.style.backgroundSize = "cover";
       //Reading Title Tag
       title.innerText = tag.tags.title;
+      tabTitle.innerText = tag.tags.title;
     },
     onError: function (error) {
       console.log(":(", error.type, error.info);
@@ -244,7 +257,33 @@ audio.addEventListener("timeupdate", updateProgress);
 progressContainer.addEventListener("click", setProgress);
 
 // Song ends
-audio.addEventListener("ended", nextSong);
+audio.addEventListener("ended", () => {
+  nextSong();
+  //Read Audio Tags
+  jsmediatags.read(audio.src, {
+    onSuccess: function (tag) {
+      //Converting Image Tag data
+      const data = tag.tags.picture.data;
+      const format = tag.tags.picture.format;
+      let base64String = "";
+
+      for (let i = 0; i < data.length; i++)
+        base64String += String.fromCharCode(data[i]);
+
+      //Reading Image Tag
+      cover.style.backgroundImage = `url("data:${format};base64,${window.btoa(
+        base64String
+      )}")`;
+      cover.style.backgroundSize = "cover";
+      //Reading Title Tag
+      title.innerText = tag.tags.title;
+      tabTitle.innerText = tag.tags.title;
+    },
+    onError: function (error) {
+      console.log(":(", error.type, error.info);
+    },
+  });
+});
 
 // Time of song
 audio.addEventListener("timeupdate", DurTime);
