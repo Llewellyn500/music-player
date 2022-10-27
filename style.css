@@ -21,6 +21,11 @@ h2 {
   margin-top: -20px;
 }
 
+h3 {
+    margin: 0;
+    margin-top: 0px;
+}
+
 .music-container {
   background-color: #1b1b22;
   border-radius: 15px;
