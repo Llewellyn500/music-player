@@ -9,12 +9,13 @@ const progressContainer = document.querySelector(".progress-container");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
+
+
 // Song titles
-const songs = [
-  "LA ESPADA - Eternal Rajin",
-  "Number One (PV Remix)  - PV",
-  "I Really Want to Stay at Your House - Rosa Walton",
-];
+var songs = new Array(100);
+for(i = 1; i <= 3; i++) {
+    songs[i];
+};
 
 //No Song Playing Cover
 cover.style.backgroundImage = 'url("./images/1.jpg")';
@@ -27,9 +28,9 @@ let songIndex = 0;
 loadSong(songs[songIndex]);
 
 // Update song details
-function loadSong(song) {
+function loadSong(songs) {
   title.innerText;
-  audio.src = `music/${song}.mp3`;
+  audio.src = `music/${songs}.mp3`;
   cover.style.backgroundImage;
 }
 
