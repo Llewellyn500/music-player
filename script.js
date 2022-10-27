@@ -29,7 +29,7 @@ cover.style.backgroundImage = 'url("./images/1.jpg")';
 cover.style.backgroundSize = "cover";
 
 // Keep track of song
-let songIndex = 0;
+let songIndex = [Math.floor(Math.random() * 10)];
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
