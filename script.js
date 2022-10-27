@@ -10,6 +10,28 @@ const tabTitle = document.querySelector("#tab-title");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
+// page loader
+window.addEventListener("load", () => {
+  document.querySelector(".page-loader").classList.add("slide-out-right");
+  setTimeout(() => {
+    document.querySelector(".page-loader").style.display = "none";
+  }, 10000);
+});
+
+// Bg Animation Effect
+function bgAnimationItems() {
+  const rows = 9,
+    cols = 10;
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      const div = document.createElement("div");
+      div.className = `col-${j + 1}`;
+      document.querySelector(".bg-animation-effect").appendChild(div);
+    }
+  }
+}
+bgAnimationItems();
+
 // Song titles
 const songs = [
   "STAR WALKIN’ (League of Legends Worlds Anthem) - Lil Nas X",
