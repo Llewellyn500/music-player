@@ -11,17 +11,16 @@ const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
 // Song titles
-// reading songs from music folder
 const songs = [
   "STAR WALKIN’ (League of Legends Worlds Anthem) - Lil Nas X",
-  "Fake Ex - Yaw Tog",
   "Dance Monkey - Tones and I",
-  "Dear Alcohol - Dax",
+  "Dear God - Dax",
+  "Fake Ex - Yaw Tog",
   "Thought Those Were My Last Words - Dax",
   "This Fffire (Rich Costey re‐record) - Franz Ferdinand",
-  "Dear God - Dax",
+  "Dear Alcohol - Dax",
   "Number One (PV Remix)  - PV",
-    "Shape of You - Ed Sheeran",
+  "Shape of You - Ed Sheeran",
   "I Really Want to Stay at Your House - Rosa Walton",
 ];
 
