@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #1b1b22;
+  background-color: #141413;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ body {
 }
 .overlay-effect-item {
   height: 10vh;
-  background-color: #1b1b22;
+  background-color: #141413;
   transition: all 0.5s ease;
 }
 .overlay-effect-item:nth-child(odd) {
@@ -128,7 +128,7 @@ h3 {
 }
 
 .music-container {
-  background-color: #1b1b22;
+  background-color: #141413;
   border-radius: 15px;
   box-shadow: 0 10px 20px 0 #2195f31e;
   border-style: solid;
@@ -192,7 +192,7 @@ h3 {
 }
 
 .action-btn {
-  background-color: #1b1b22;
+  background-color: #141413;
   border: 0;
   color: #2196f3;
   font-size: 20px;
@@ -211,7 +211,7 @@ h3 {
 }
 
 .music-info {
-  background-color: #32323a3f;
+  background-color: #1e1e223f;
   border-radius: 15px 15px 0 0;
   position: absolute;
   top: 0;
