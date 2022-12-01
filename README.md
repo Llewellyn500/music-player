@@ -1,6 +1,6 @@
 <h1 align="center">MUSIC PLAYER <img src="https://i.gifer.com/73iJ.gif" width="40px"/></h1>
 
-<img src="./images/banner.png" alt="app banner"/>
+<img src="./assets/images/banner.png" alt="app banner"/>
 
 <h2>Date: 27th October, 2022</h2>
 
