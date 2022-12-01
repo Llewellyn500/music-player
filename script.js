@@ -1,5 +1,6 @@
 const jsmediatags = window.jsmediatags;
 const musicContainer = document.querySelector(".music-container");
+const more_info_content = document.querySelector(".more_info_content");
 const playBtn = document.querySelector("#play");
 const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
@@ -9,7 +10,6 @@ const progressContainer = document.querySelector(".progress-container");
 const tabTitle = document.querySelector("#tab-title");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
-
 
 // Bg Animation Effect
 function bgAnimationItems() {
@@ -24,7 +24,6 @@ function bgAnimationItems() {
   }
 }
 bgAnimationItems();
-
 
 // Song titles
 const songs = [
@@ -213,6 +212,36 @@ playBtn.addEventListener("click", () => {
 // Change song
 prevBtn.addEventListener("click", () => {
   prevSong();
+  
+   //when you click on the more_info button
+   more_info.addEventListener("click", () => {
+    console.log("more_info");
+    //add active to the class more_info_content
+    more_info_content.classList.add("active");
+
+    //adding song metadata
+    song_title.innerText = title.innerText;
+    song_artist.innerText = artist.innerText;
+    song_album.innerText = album.innerText;
+    song_genre.innerText = genre.innerText;
+    song_year.innerText = year.innerText;
+  });
+  //getting metadata from the audio file
+jsmediatags.read(audio.src, {
+  onSuccess: function (tag) {
+    //Reading Title Tag
+    title.innerText = tag.tags.title;
+    tabTitle.innerText = tag.tags.title;
+    //Reading Artist Tag
+    artist.innerText = tag.tags.artist;
+    //Reading Album Tag
+    album.innerText = tag.tags.album;
+    //Reading Genre Tag
+    genre.innerText = tag.tags.genre;
+    //Reading Year Tag
+    year.innerText = tag.tags.year;
+  },
+});
 
   jsmediatags.read(audio.src, {
     onSuccess: function (tag) {
@@ -240,6 +269,38 @@ prevBtn.addEventListener("click", () => {
 });
 nextBtn.addEventListener("click", () => {
   nextSong();
+ 
+  
+   //when you click on the more_info button
+   more_info.addEventListener("click", () => {
+    console.log("more_info");
+    //add active to the class more_info_content
+    more_info_content.classList.add("active");
+
+    //adding song metadata
+    song_title.innerText = title.innerText;
+    song_artist.innerText = artist.innerText;
+    song_album.innerText = album.innerText;
+    song_genre.innerText = genre.innerText;
+    song_year.innerText = year.innerText;
+  });
+  //getting metadata from the audio file
+jsmediatags.read(audio.src, {
+  onSuccess: function (tag) {
+    //Reading Title Tag
+    title.innerText = tag.tags.title;
+    tabTitle.innerText = tag.tags.title;
+    //Reading Artist Tag
+    artist.innerText = tag.tags.artist;
+    //Reading Album Tag
+    album.innerText = tag.tags.album;
+    //Reading Genre Tag
+    genre.innerText = tag.tags.genre;
+    //Reading Year Tag
+    year.innerText = tag.tags.year;
+  },
+});
+
   jsmediatags.read(audio.src, {
     onSuccess: function (tag) {
       //Read Audio Tags
@@ -303,9 +364,32 @@ audio.addEventListener("ended", () => {
 // Time of song
 audio.addEventListener("timeupdate", DurTime);
 
-// an onclick event on the button more_info
-more_info.addEventListener("click", () => {
-  // if the button more_info is clicked, the class "more_info" is added to the body
-  document.body.classList.toggle("more_info");
-});
+ //when you click on the more_info button
+ more_info.addEventListener("click", () => {
+  console.log("more_info");
+  //add active to the class more_info_content
+  more_info_content.classList.add("active");
 
+  //adding song metadata
+  song_title.innerText = title.innerText;
+  song_artist.innerText = artist.innerText;
+  song_album.innerText = album.innerText;
+  song_genre.innerText = genre.innerText;
+  song_year.innerText = year.innerText;
+});
+//getting metadata from the audio file
+jsmediatags.read(audio.src, {
+onSuccess: function (tag) {
+  //Reading Title Tag
+  title.innerText = tag.tags.title;
+  tabTitle.innerText = tag.tags.title;
+  //Reading Artist Tag
+  artist.innerText = tag.tags.artist;
+  //Reading Album Tag
+  album.innerText = tag.tags.album;
+  //Reading Genre Tag
+  genre.innerText = tag.tags.genre;
+  //Reading Year Tag
+  year.innerText = tag.tags.year;
+},
+});

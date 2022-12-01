@@ -14,6 +14,7 @@ body {
   font-family: "Share Tech Mono", monospace;
   margin: 0;
   color: #2196f3;
+  height: 100vh;
 }
 
 a {
@@ -258,16 +259,20 @@ h3 {
   transition: width 0.1s linear;
 }
 
-.more_info_container {
+.more_info_content{
   background-color: #1e1e223f;
   border-radius: 15px 15px 0 0;
   position: absolute;
   top: 0;
   left: 20px;
   width: calc(100% - 40px);
-  padding: 10px 10px 10px 150px;
+  padding: 10px 10px 10px 75px;
   opacity: 0;
   transform: translateY(0%);
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   z-index: 0;
+}
+.more_info_content.active{
+  opacity: 1;
+  transform: translateY(30%);
 }
