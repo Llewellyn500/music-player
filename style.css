@@ -197,6 +197,8 @@ h3 {
   z-index: 1;
 }
 
+
+
 .action-btn {
   background-color: #141413;
   border: 0;
@@ -254,4 +256,18 @@ h3 {
   height: 100%;
   width: 0%;
   transition: width 0.1s linear;
+}
+
+.more_info_container {
+  background-color: #1e1e223f;
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
 }

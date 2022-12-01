@@ -302,3 +302,10 @@ audio.addEventListener("ended", () => {
 
 // Time of song
 audio.addEventListener("timeupdate", DurTime);
+
+// an onclick event on the button more_info
+more_info.addEventListener("click", () => {
+  // if the button more_info is clicked, the class "more_info" is added to the body
+  document.body.classList.toggle("more_info");
+});
+
