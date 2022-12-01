@@ -25,6 +25,7 @@ function bgAnimationItems() {
 }
 bgAnimationItems();
 
+
 // Song titles
 const songs = [
   "STAR WALKIN’ (League of Legends Worlds Anthem) - Lil Nas X",
@@ -40,7 +41,7 @@ const songs = [
 ];
 
 //No Song Playing Cover
-cover.style.backgroundImage = 'url("./images/1.jpg")';
+cover.style.backgroundImage = 'url("./assets/images/1.jpg")';
 cover.style.backgroundSize = "cover";
 
 // Keep track of song
@@ -53,7 +54,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   tabTitle.innerText;
   title.innerText;
-  audio.src = `music/${song}.mp3`;
+  audio.src = `assets/audio/${song}.mp3`;
   cover.style.backgroundImage;
 }
 

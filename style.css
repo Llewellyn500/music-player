@@ -16,6 +16,12 @@ body {
   color: #2196f3;
 }
 
+a {
+  color: #2196f3;
+  text-decoration: none;
+  link-style: none;
+}
+
 /* Bg Animation Effect */
 .bg-animation-effect {
   position: fixed;
